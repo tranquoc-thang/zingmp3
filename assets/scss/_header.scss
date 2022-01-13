@@ -1,0 +1,119 @@
+.header {
+  height: 70px;
+  position: fixed;
+  background: #170f23;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  &-arrow {
+    display: flex;
+    &-icon {
+      font-size: 3rem;
+      color: $text-color;
+      opacity: 0.2;
+      cursor: pointer;
+      &:last-child {
+        margin-left: 15px;
+        margin-right: 30px;
+      }
+    }
+  }
+  &-search {
+    background: #4e4857;
+    display: block;
+    border-radius: 2rem;
+    position: relative;
+    &-icon {
+      font-size: 1.6rem;
+      color: $text-color;
+      padding-left: 15px;
+    }
+    &-input {
+      color: $text-color;
+      background: #4e4857;
+      width: 500px;
+      border-radius: 2rem;
+      outline: none;
+      border: none;
+      padding: 10px;
+      font-size: 1.6rem;
+      &::-webkit-input-placeholder {
+        color: $text-color;
+      }
+    }
+    &-list {
+      list-style: none;
+    }
+    &-caption {
+      color: $text-color;
+      font-size: 1.4rem;
+      padding: 15px 15px 15px 35px;
+      font-weight: 700;
+    }
+    &-link {
+      color: $text-color;
+      font-size: 1.4rem;
+      display: flex;
+      padding: 10px;
+      margin: 0 10px;
+      border-radius: 1rem;
+      font-weight: 300;
+      &:last-child {
+        margin-bottom: 15px;
+      }
+      &:hover {
+        background: #563983;
+      }
+    }
+    &-icon {
+      margin-right: 10px;
+    }
+  }
+  &-search-history {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #4e4857;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    display: none;
+  }
+  &-search-input:focus {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #432275;
+  }
+  &-search-input:focus + &-search-history {
+    display: block;
+    background: #432275;
+  }
+  &-right {
+    margin-left: auto;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+  &-item {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #4e4857;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-icon {
+    font-size: 1.6rem;
+    color: $text-color;
+  }
+  &-avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
+}

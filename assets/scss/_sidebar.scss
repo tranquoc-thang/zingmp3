@@ -1,0 +1,124 @@
+.sidebar {
+  width: 240px;
+  height: calc(100% - 90px);
+  background: #231b2e;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  &-logo{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    &-img {
+      width: 150px;
+      padding-left: 30px;
+    }
+  }
+  &-list {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      bottom: -18px;
+      background: #ccc;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-item {
+    font-size: 1.4rem;
+    padding: 8px 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $text-color;
+    &:hover {
+      opacity: 0.8;
+    }
+    &--active {
+      background: #3a3344;
+      border-left: 3px solid purple;
+    }
+  }
+  &-icon {
+    font-size: 2.2rem;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  &-sub-list {
+    margin-top: 36px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: grey; 
+      border-radius: 10px;
+    }
+  }
+  &-login {
+    margin-top: 20px !important;
+  }
+  &-login,
+  &-vip {
+    width: calc(100% - 30px);
+    height: 100px;
+    background: purple;
+    margin: 0 auto 10px;
+    border-radius: 0.7rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  &-login-link,
+  &-vip-link {
+      display: block;
+      background: #801aab;
+      color: $text-color;
+      padding: 8px 20px;
+      width: 150px;
+      margin: 0 auto;
+      border-radius: 4rem;
+      margin-top: 8px;
+      border: 1px solid #f0f0f0;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+  }
+  &-vip-link {
+    background: #ffdb00;
+    color: #32323d;
+    border: unset;
+  }
+  &-login {
+    background: #7200a1;
+    display: flex;
+  }
+  &-vip {
+    background: linear-gradient(135deg, #5e4ce7, #c16bd8);
+  }
+  &-create {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-top: 1px solid #ccc;
+    margin-top: auto;
+    &-icon {
+      font-size: 3.4rem;
+      font-weight: 300;
+      display: block;
+      margin: 0 10px 5px 25px;
+    }
+  }
+}

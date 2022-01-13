@@ -1,0 +1,57 @@
+$text-color: #f0eff0;
+$gray-light: #817d86;
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  line-height: 1;
+  color: $text-color;
+  background-color: #170f23;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+img {
+  display: block;
+}
+
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: gray; 
+}
+
+.app {
+  margin: 0 auto;
+  height: 1000px;
+}
+
+.container {
+  margin: 0 auto 0;
+  height: 100%;
+}
+
+.header {
+  height: 70px;
+}
+
+@import './sidebar.scss';
+@import './header.scss';
+@import './control.scss';
+@import './content.scss';
