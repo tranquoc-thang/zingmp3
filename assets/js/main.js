@@ -125,9 +125,6 @@ const app = {
           <div class="content-favoritesong">
             <i class="fas fa-heart"></i>
           </div>
-          <div class="content-durationsong">
-            4:05
-          </div>
         </li>
       `;
     });
